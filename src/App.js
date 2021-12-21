@@ -23,8 +23,8 @@ import "./Assets/fonts/Gilroy-UltraLight.woff";
 import "./Assets/fonts/Gilroy-UltraLightItalic.woff";
 // Fonts End
 
-import Nav from './components/Nav';
-import Drone from './components/Drone';
+import Nav from './components/Nav.js';
+import Drone from './components/Drone.js';
 import Hero from './components/Hero.js';
 import Content from './components/Content.js';
 
