@@ -1,0 +1,15 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: color(darkGreen);
+  height: 100px;
+  width: 100%;
+  border-radius: 1.25rem 1.25rem 0 0;
+  color: color(light-BG);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

@@ -1,0 +1,28 @@
+.home-content {
+  &__main-title {
+    font-family: "Gilroy-Bold";
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+  }
+
+  p:not(last-child) {
+    margin: 1rem 0;
+  }
+
+  &__CTA {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.625rem;
+    color: color(golden-green);
+
+    p {
+      margin: 0;
+    }
+  }
+}

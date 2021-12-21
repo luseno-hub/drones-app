@@ -1,38 +1,358 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "Gilroy-Black";
+  src: url("./Assets/fonts/Gilroy-Black.woff") format("woff");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "Gilroy-BlackItalic";
+  src: url("./Assets/fonts/Gilroy-BlackItalic.woff") format("woff");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url("./Assets/fonts/Gilroy-Bold.woff") format("woff");
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@font-face {
+  font-family: "Gilroy-BoldItalic";
+  src: url("./Assets/fonts/Gilroy-BoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy-ExtraBold";
+  src: url("./Assets/fonts/Gilroy-ExtraBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy-ExtraBoldItalic";
+  src: url("./Assets/fonts/Gilroy-ExtraBoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy-Heavy";
+  src: url("./Assets/fonts/Gilroy-Heavy.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy-HeavyItalic";
+  src: url("./Assets/fonts/Gilroy-HeavyItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy-Light";
+  src: url("./Assets/fonts/Gilroy-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy-LightItalic";
+  src: url("./Assets/fonts/Gilroy-LightItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url("./Assets/fonts/Gilroy-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy-MediumItalic";
+  src: url("./Assets/fonts/Gilroy-MediumItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy-Regular";
+  src: url("./Assets/fonts/Gilroy-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy-RegularItalic";
+  src: url("./Assets/fonts/Gilroy-RegularItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy-SemiBold";
+  src: url("./Assets/fonts/Gilroy-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy-SemiBoldItalic";
+  src: url("./Assets/fonts/Gilroy-SemiBoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy-Thin";
+  src: url("./Assets/fonts/Gilroy-Thin.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy-ThinItalic";
+  src: url("./Assets/fonts/Gilroy-ThinItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy-UltraLight";
+  src: url("./Assets/fonts/Gilroy-UltraLight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy-UltraLightItalic";
+  src: url("./Assets/fonts/Gilroy-UltraLightItalic.woff") format("woff");
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+p {
+  font-family: "Gilroy-Regular", Arial, sans-serif;
+}
+
+h3 {
+  font-family: "Gilroy-Medium", Arial, sans-serif;
+}
+
+a,
+a > p {
+  font-family: "Gilroy-Heavy", Arial, sans-serif;
+  text-decoration: none;
+}
+
+.container-fluid {
+  padding: 1.25rem;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #132b1f;
+  height: 100px;
+  width: 100%;
+  border-radius: 1.25rem 1.25rem 0 0;
+  color: #f4f5f6;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.App {
+  max-width: 400px;
+  margin: 0 auto 90px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App__drones-heading {
+  background-color: #f4f5f6;
+  padding-top: 2rem;
 }
+
+.App__drone-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  overflow-x: scroll;
+  padding: 0 1em 2rem;
+  margin: 0 auto 2rem;
+  background-color: #f4f5f6;
+}
+
+.hero-wrapper {
+  width: 100%;
+  overflow: hidden;
+  height: 60vh;
+  border-radius: 0 0 1.25rem 1.25rem;
+  -webkit-box-shadow: 0px 40px 40px -20px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 40px 40px -20px rgba(0, 0, 0, 0.25);
+}
+
+.hero-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.drone-info--wrapper + .drone-info--wrapper {
+  margin-left: 1rem;
+}
+
+.drone-info {
+  width: 6em;
+  height: auto;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.drone-info__IMG-droneWrap {
+  width: 6em;
+  height: 6em;
+  border-radius: 0.625rem;
+  overflow: hidden;
+  -webkit-box-shadow: 2px 6px 6px -3px rgba(0, 0, 0, 0.15);
+          box-shadow: 2px 6px 6px -3px rgba(0, 0, 0, 0.15);
+}
+
+.drone-info__IMG-droneWrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.drone-info__title-name {
+  font-weight: bold;
+  margin-top: 1rem;
+  font-size: 0.75rem;
+}
+
+.drone-info__title-price {
+  color: #ba8d35;
+  font-size: 0.75rem;
+}
+
+.home-content__main-title {
+  font-family: "Gilroy-Bold";
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.home-content p {
+  font-size: 0.875rem;
+}
+
+.home-content p:not(last-child) {
+  margin: 1rem 0;
+}
+
+.home-content__CTA {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 0.625rem;
+  color: #ba8d35;
+}
+
+.home-content__CTA p {
+  margin: 0;
+}
+/*# sourceMappingURL=App.css.map */
