@@ -221,6 +221,8 @@ a > p {
   background-color: #132b1f;
   height: 100px;
   width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
   border-radius: 1.25rem 1.25rem 0 0;
   color: #f4f5f6;
   position: fixed;
@@ -231,7 +233,7 @@ a > p {
 
 .App {
   max-width: 400px;
-  margin: 0 auto 90px;
+  margin: 0 auto 100px;
 }
 
 .App__drones-heading {
