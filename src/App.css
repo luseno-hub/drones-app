@@ -311,6 +311,10 @@ a > p {
      object-fit: cover;
 }
 
+.drone-info__name-price {
+  text-align: center;
+}
+
 .drone-info__title-name {
   font-weight: bold;
   margin-top: 1rem;
