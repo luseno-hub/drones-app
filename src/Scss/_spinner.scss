@@ -1,0 +1,39 @@
+.spinner > svg {
+  margin: 2rem auto;
+  width: 150px;
+  height: 150px;
+  padding: 1rem;
+}
+
+#circ-1,
+#circ-3 {
+  @include keyframes(spinn) {
+    from {
+      transform-origin: center;
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+      transform-origin: center;
+    }
+  }
+  @include animate(spinn, 10s, linear, infinite);
+}
+
+#circ-2 {
+  @include keyframes(spinns) {
+    from {
+      transform-origin: center;
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+      transform-origin: center;
+    }
+  }
+  @include animate(spinns, 4s, linear, infinite);
+}
+
+#circ-3 {
+  @include animate(spinn, 2s, linear, infinite);
+}
