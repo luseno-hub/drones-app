@@ -2,7 +2,7 @@ import drone1 from "../../../drones-app/src/Assets/jason-blackeye-XYrjl3j7smo-un
 
 function Drone() {
   return ( 
-    <div className="drone-info--wrapper">
+    <div className="drone-info--wrapper" draggable="true">
       <div className="drone-info">
         <div class="drone-info__IMG-droneWrap">
           <img src={drone1} className="img-IMG" alt="drone in forest"/>
