@@ -357,4 +357,87 @@ a > p {
 .home-content__CTA p {
   margin: 0;
 }
+
+.spinner > svg {
+  margin: 2rem auto;
+  width: 150px;
+  height: 150px;
+  padding: 1rem;
+}
+
+#circ-1,
+#circ-3 {
+  -webkit-animation: spinn 10s linear infinite;
+          animation: spinn 10s linear infinite;
+}
+
+@-webkit-keyframes spinn {
+  from {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
+
+@keyframes spinn {
+  from {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
+
+#circ-2 {
+  -webkit-animation: spinns 4s linear infinite;
+          animation: spinns 4s linear infinite;
+}
+
+@-webkit-keyframes spinns {
+  from {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
+
+@keyframes spinns {
+  from {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
+
+#circ-3 {
+  -webkit-animation: spinn 2s linear infinite;
+          animation: spinn 2s linear infinite;
+}
 /*# sourceMappingURL=App.css.map */

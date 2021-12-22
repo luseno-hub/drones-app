@@ -27,6 +27,7 @@ import Nav from './components/Nav.js';
 import Drone from './components/Drone.js';
 import Hero from './components/Hero.js';
 import Content from './components/Content.js';
+import Spinner from './components/Spinner.js';
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
         < Drone/>
         < Drone/>
       </div>
+      < Spinner />
     </div>
   );
 }
